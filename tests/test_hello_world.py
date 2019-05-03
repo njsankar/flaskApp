@@ -14,15 +14,8 @@ class TestHelloWorld(unittest.TestCase):
     
     def test_message(self):
         response = self.app.get('/')
-        message = 'Hello DockerCon 2018!'
-        self.assertEqual(message, message)
-        
+        message = hello_world.wrap_html('Welcome to the DevOps Project!')
+        self.assertEqual(response.data, message)
 
 if __name__ == '__main__':
     unittest.main()
-
-
-
-'''class MyFirstTests(unittest.TestCase):
-def test_hello(self):
-        self.assertEqual(hello_world(), 'hello world')'''

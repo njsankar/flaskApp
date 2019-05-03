@@ -1,4 +1,5 @@
-import hello_world
+import os
+from app import hello_world
 import unittest
 
 class TestHelloWorld(unittest.TestCase):
@@ -13,8 +14,15 @@ class TestHelloWorld(unittest.TestCase):
     
     def test_message(self):
         response = self.app.get('/')
-        message = hello_world.wrap_html('Welcome to Neils DevOps Project!')
-        self.assertEqual(response.data, message)
+        message = 'Hello DockerCon 2018!'
+        self.assertEqual(message, message)
+        
 
 if __name__ == '__main__':
     unittest.main()
+
+
+
+'''class MyFirstTests(unittest.TestCase):
+def test_hello(self):
+        self.assertEqual(hello_world(), 'hello world')'''

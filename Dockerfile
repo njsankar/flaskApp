@@ -4,4 +4,4 @@ COPY requirements.txt /src/requirements.txt
 RUN pip install -r /src/requirements.txt
 COPY app/hello_world.py /src
 COPY app /src/app
-CMD python /src/hello_world.py
+CMD python /src/app/hello_world.py

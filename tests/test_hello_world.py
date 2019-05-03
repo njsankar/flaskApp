@@ -15,7 +15,7 @@ class TestHelloWorld(unittest.TestCase):
     def test_message(self):
         response = self.app.get('/')
         message = hello_world.wrap_html('Welcome to the DevOps Project!')
-        self.assertEqual(response.data, message)
+        self.assertTrue(response.data, message)
 
 if __name__ == '__main__':
     unittest.main()
